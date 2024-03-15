@@ -1,9 +1,6 @@
 #include "dna.h"
 
-DNA::DNA() {
-	ndna1 = nicDNA();
-	ndna2 = nicDNA();
-}
+DNA::DNA() : ndna1{ nicDNA() }, ndna2{ nicDNA() } {}
 
 DNA::DNA(nicDNA ndna) : ndna1{ nicDNA(ndna) }, ndna2{ nicDNA(ndna.dlugosc()) } {
 	for (int i = 0; i < ndna.dlugosc(); ++i) {
